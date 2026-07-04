@@ -2,17 +2,33 @@
 BOX MODEL RESET 
 =============== */
 
+/* Stripping browser defaults to ensure every "gift box" behaves predictably across all devices. */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ======
+FONT FACE
+========= */
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 100 900; /* The range '100 900' enables the full spectrum of weights in a single file */
+  font-style: normal;
+  font-display: swap; /* A11Y: Shows fallback font while Inter loads */
+}
+
 /* =================
 DESIGN TOKEN VAULT ↓
+Purpose: Centralized "storage room" for all project variables.
 ==================== */
 :root {
-  /* PRIMITIVE SPACING */
+  /* ---------------
+    SPACING TOKENS ↓
+  ------------------ */
+  /* PRIMITIVE */
   --sp-50: 0.25rem; /* 4px */
   --sp-100: 0.5rem; /* 8px */
   --sp-150: 0.75rem; /* 12px */
@@ -20,9 +36,46 @@ DESIGN TOKEN VAULT ↓
   --sp-300: 1.5rem; /* 24px */
   --sp-500: 2.5rem; /* 40px */
 
-  /* SEMANTIC SPACING */
+  /* SEMANTIC */
+
+  /* FONT SIZE */
   --fs-14: 0.875rem; /* 14px */
   --fs-24: 1.5rem; /* 24px */
+
+  /* CARD WIDTH */
+  --wd-card: clamp(20rem, 90vw, 24rem); /* 320-384px 90% viewport width */
+
+  /* BORDER RADIUS */
+  --br-card: var(--sp-150);
+  --br-btn: var(--sp-100);
+
+  /* ---------------
+    SPACING TOKENS ↑
+  ------------------ */
+
+  /* ------------------
+    TYPOGRAPHY TOKENS ↓
+  --------------------- */
+  /* FONT FAMILY */
+  --ff-: "Inter", sans-serif;
+
+  /* FONT WEIGHT */
+  --fw-400: 400; /* We precisely define only the weights required by the style guide */
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /* LINE HEIGHT */
+  --lh-150: 1.5;
+  /* ------------------
+    TYPOGRAPHY TOKENS ↑
+  --------------------- */
+
+  /* COLOR PALETTE */
+  --clr-green: hsl(75, 94%, 57%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-grey-800: hsl(0, 0%, 12%);
+  --clr-grey-900: hsl(0, 0%, 8%);
 }
 /* =================
 DESIGN TOKEN VAULT ↑
