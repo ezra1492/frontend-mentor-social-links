@@ -7,3 +7,23 @@ BOX MODEL RESET
   margin: 0;
   padding: 0;
 }
+
+/* =================
+DESIGN TOKEN VAULT ↓
+==================== */
+:root {
+  /* PRIMITIVE SPACING */
+  --sp-50: 0.25rem; /* 4px */
+  --sp-100: 0.5rem; /* 8px */
+  --sp-150: 0.75rem; /* 12px */
+  --sp-200: 1rem; /* 16px */
+  --sp-300: 1.5rem; /* 24px */
+  --sp-500: 2.5rem; /* 40px */
+
+  /* SEMANTIC SPACING */
+  --fs-14: 0.875rem; /* 14px */
+  --fs-24: 1.5rem; /* 24px */
+}
+/* =================
+DESIGN TOKEN VAULT ↑
+==================== */
