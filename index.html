@@ -30,11 +30,13 @@
     <main>
       <!-- Article: this is our profile card-->
       <article class="social-card">
+        <!-- A11Y: alt="" treats this as decorative because the H1 provides the name context -->
         <img
           class="social-card__avatar"
           src="assets/images/avatar-jessica.jpeg"
           alt=""
         />
+
         <header>
           <!-- Header: groups introductory content -->
           <h1 class="social-card__name">Jessica Randall</h1>
@@ -43,7 +45,7 @@
 
         <p class="social-card__bio">"Front-end developer and avid reader."</p>
 
-        <nav class="social-card__links">
+        <nav class="social-card__links" aria-label="Social links">
           <!-- Nav: wraps a major block of navigation/social links -->
           <ul>
             <li>
