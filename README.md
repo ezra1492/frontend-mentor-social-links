@@ -156,7 +156,7 @@ I implemented a professional "hydraulic" interaction feel.
 
 ### Continued development
 
-In future projects, I intend to refine my command of the following areas:
+In future projects, I intend to refine my command of the following areas :
 
 - **Flexbox Mastery:** While I have established a solid foundation in "Magnetic Containment" and viewport orchestration, I want to further explore complex alignment patterns and flexible layouts to ensure total control over responsive designs.
 - **Advanced List Properties:** I plan to dive deeper into the varied properties of list containers and items, particularly regarding how they interact with accessibility markers and unconventional layout structures.
