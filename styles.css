@@ -59,6 +59,9 @@ Purpose: Centralized "storage room" for all project variables.
   --br-btn: var(--sp-100);
   --br-avatar: 50%;
 
+  /* MARGINS */
+  --mrg-name: var(--sp-300) 0 var(--sp-50);
+
   /* ---------------
     SPACING TOKENS ↑
   ------------------ */
@@ -125,6 +128,13 @@ body {
   width: var(--wd-avatar);
   /* 4. Visuals */
   border-radius: var(--br-avatar);
+}
+
+.social-card__name {
+  margin: var(--mrg-name);
+  font-size: var(--fs-24);
+  font-weight: var(--fw-600);
+  color: var(--clr-white);
 }
 /* =======================
 SOCIAL LINKS CARD DESIGN ↑
