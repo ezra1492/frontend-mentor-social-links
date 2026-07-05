@@ -64,6 +64,9 @@ Purpose: Centralized "storage room" for all project variables.
   --mrg-location: var(--sp-300);
   --mrg-bio: var(--sp-300);
 
+  /* PADDINGS */
+  --pd-btn: var(--sp-150);
+
   /* ---------------
     SPACING TOKENS ↑
   ------------------ */
@@ -81,6 +84,13 @@ Purpose: Centralized "storage room" for all project variables.
 
   /* LINE HEIGHT */
   --lh-150: 1.5;
+
+  /* TEXT DECORATION */
+  --td-btn: none;
+
+  /* LIST STYLE TYPE */
+  --lst-ul: none;
+
   /* ------------------
     TYPOGRAPHY TOKENS ↑
   --------------------- */
@@ -152,6 +162,25 @@ body {
   font-weight: var(--fw-400);
   color: var(--clr-white);
 }
+
+.social-card__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-200);
+  list-style-type: var(--lst-ul); /* remove bullet points */
+}
+
+.social-card__btn {
+  display: block;
+  padding: var(--pd-btn);
+  text-decoration: var(--td-btn);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-600);
+  background-color: var(--clr-grey-700);
+  color: var(--clr-white);
+  border-radius: var(--br-btn);
+}
+
 /* =======================
 SOCIAL LINKS CARD DESIGN ↑
 ========================== */
