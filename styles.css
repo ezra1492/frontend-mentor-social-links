@@ -109,8 +109,10 @@ Purpose: Centralized "storage room" for all project variables.
   --------------------- */
 
   /* TRANSITION */
-  --tr-entry: all 0.1s ease-out; /* Snappy, immediate feedback */
-  --tr-exit: all 0.5s ease-in-out; /* Smooth, elegant return */
+  --tr-entry:
+    background-color 0.1s ease-out, color 0.1s ease-out; /* Snappy, immediate feedback */
+  --tr-exit:
+    background-color 0.5s ease-in-out, color 0.5s ease-in-out; /* Smooth, elegant return */
 }
 /* =================
 DESIGN TOKEN VAULT ↑
