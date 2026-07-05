@@ -178,9 +178,6 @@ body {
   flex-direction: column;
   gap: var(--sp-200);
   list-style-type: var(--lst-ul); /* remove bullet points */
-  transition: var(
-    --tr-active
-  ); /* Provides visual feedback for hover and keyboard focus */
 }
 
 .social-card__btn {
@@ -204,7 +201,6 @@ body {
 .social-card__btn:focus-visible {
   background-color: var(--clr-green);
   color: var(--clr-grey-700);
-  outline: none;
   transition: var(
     --tr-entry
   ); /* Snappy active state change when the mouse enters  */
@@ -212,7 +208,6 @@ body {
 
 .attribution a:hover,
 .attribution a:focus-visible {
-  outline: none;
   border-radius: var(--br-attribution);
   background-color: var(--clr-green);
   color: var(--clr-grey-700);
