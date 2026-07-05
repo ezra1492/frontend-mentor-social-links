@@ -44,6 +44,7 @@ Purpose: Centralized "storage room" for all project variables.
 
   /* SEMANTIC: The "role" these measurements play in the layout. */
   /* FONT SIZE */
+  --fs-11: var(--sp-110); /* 11px */
   --fs-14: var(--sp-175); /* 14px */
   --fs-24: var(--sp-300); /* 24px */
 
@@ -65,6 +66,7 @@ Purpose: Centralized "storage room" for all project variables.
   --mrg-name: var(--sp-300) 0 var(--sp-50);
   --mrg-location: var(--sp-300);
   --mrg-bio: var(--sp-300);
+  --mrg-attribution: var(--sp-150);
 
   /* PADDINGS */
   --pd-btn: var(--sp-150);
@@ -223,8 +225,8 @@ body {
   --------------- */
 
 .attribution {
-  margin: var(--sp-150);
-  font-size: var(--sp-110);
+  margin: var(--mrg-attribution);
+  font-size: var(--fs-11);
   text-align: center;
   color: var(--clr-white);
 }
