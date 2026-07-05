@@ -28,22 +28,31 @@ Purpose: Centralized "storage room" for all project variables.
   /* ---------------
     SPACING TOKENS ↓
   ------------------ */
-  /* PRIMITIVE */
+  /* PRIMITIVE: The raw "tape measure" units.
+    Baseline: 100 units = 8px (0.5rem). */
   --sp-50: 0.25rem; /* 4px */
   --sp-100: 0.5rem; /* 8px */
   --sp-150: 0.75rem; /* 12px */
+  --sp-175: 0.875rem; /* 14px (Style Guide Paragraph) */
   --sp-200: 1rem; /* 16px */
   --sp-300: 1.5rem; /* 24px */
   --sp-500: 2.5rem; /* 40px */
+  --sp-1100: 5.5rem; /* 88px (Avatar Dimension) */
+  --sp-4000: 20rem; /* 320px (Mobile Min-Width) */
+  --sp-4800: 24rem; /* 384px (Desktop Max-Width) */
 
-  /* SEMANTIC */
+  /* SEMANTIC: The "role" these measurements play in the layout. */
   /* FONT SIZE */
-  --fs-14: 0.875rem; /* 14px */
-  --fs-24: 1.5rem; /* 24px */
+  --fs-14: var(--sp-175); /* 14px */
+  --fs-24: var(--sp-300); /* 24px */
 
   /* WIDTHS */
-  --wd-card: clamp(20rem, 90vw, 24rem); /* 320-384px 90% viewport width */
-  --wd-avatar: 5.5rem; /* 88px */
+  --wd-card: clamp(
+    var(--sp-4000),
+    90vw,
+    var(--sp-4800)
+  ); /* 320-384px 90% viewport width */
+  --wd-avatar: var(--sp-1100); /* 88px */
 
   /* BORDER RADIUS */
   --br-card: var(--sp-150);
