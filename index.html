@@ -17,15 +17,6 @@
     <title>Frontend Mentor | Social links profile</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 0.6875rem;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <!-- Main landmark: helps with accessibility and SEO (A11Y) -->
@@ -47,9 +38,9 @@
 
         <p class="social-card__bio">"Front-end developer and avid reader."</p>
 
-        <nav class="social-card__links" aria-label="Social links">
+        <nav aria-label="Social links">
           <!-- Nav: wraps a major block of navigation/social links -->
-          <ul>
+          <ul class="social-card__links">
             <li>
               <a
                 class="social-card__btn"
@@ -112,6 +103,7 @@
         href="https://github.com/ezra1492"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="View GitHub profile"
         >Israel (Ray) Guevara</a
       >.
     </footer>
