@@ -150,6 +150,8 @@ body {
 }
 
 .social-card__avatar {
+  /* 1. Layout Context */
+  display: block;
   /* 2. Box Model */
   width: var(--wd-avatar);
   /* 4. Visuals */
