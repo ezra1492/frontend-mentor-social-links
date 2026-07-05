@@ -23,22 +23,22 @@ The goal of this project was to build a clean, responsive layout that matches th
 
 I built this project with a mobile-first approach, ensuring that the layout looks professional and scales correctly on screens of any size while maintaining full accessibility for all users.
 
+![Croquis](assets/images/croquis.png)
+
 ### The challenge
 
 Users should be able to:
 
 - See hover and focus states for all interactive elements on the page.
 
-### Screenshot
-
-![Croquis](./assets/images/tada%20local-remote.png)
-
 ### Links
 
-- Solution URL: [https://github.com/ezra1492/frontend-mentor-social-links](https://github.com/ezra1492/frontend-mentor-social-links)
-- Live Site URL: [https://ezra1492.github.io/social-links-profile/](https://ezra1492.github.io/social-links-profile/) [3]
+- Solution URL: [GitHub](https://github.com/ezra1492/frontend-mentor-social-links)
+- Live Site URL: [gh-pahes](https://ezra1492.github.io/frontend-mentor-social-links/)
 
 ## My process
+
+![Croquis](./assets/images/tada%20local-remote.png)
 
 ### Built with
 
