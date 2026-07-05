@@ -17,6 +17,12 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 
 ## Overview
 
+This is my solution to the **Social links profile** challenge on Frontend Mentor.
+
+The goal of this project was to build a clean, responsive layout that matches the provided design perfectly. While working on this challenge, my main focus was moving away from random design choices and mastering a strict, organized **CSS Design System**—specifically utilizing a **Design Token Vault** with **Primitive and Semantic abstractions** to ensure systemic resiliency.
+
+I built this project with a mobile-first approach, ensuring that the layout looks professional and scales correctly on screens of any size while maintaining full accessibility for all users.
+
 ### The challenge
 
 Users should be able to:
