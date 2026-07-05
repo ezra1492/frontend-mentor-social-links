@@ -32,6 +32,7 @@ Purpose: Centralized "storage room" for all project variables.
     Baseline: 100 units = 8px (0.5rem). */
   --sp-50: 0.25rem; /* 4px */
   --sp-100: 0.5rem; /* 8px */
+  --sp-110: 0.6875rem; /* 11px (attribution) */
   --sp-150: 0.75rem; /* 12px */
   --sp-175: 0.875rem; /* 14px (Style Guide Paragraph) */
   --sp-200: 1rem; /* 16px */
@@ -58,6 +59,7 @@ Purpose: Centralized "storage room" for all project variables.
   --br-card: var(--sp-150);
   --br-btn: var(--sp-100);
   --br-avatar: 50%;
+  --br-attribution: var(--sp-50);
 
   /* MARGINS */
   --mrg-name: var(--sp-300) 0 var(--sp-50);
@@ -101,6 +103,14 @@ Purpose: Centralized "storage room" for all project variables.
   --clr-grey-700: hsl(0, 0%, 20%);
   --clr-grey-800: hsl(0, 0%, 12%);
   --clr-grey-900: hsl(0, 0%, 8%);
+
+  /* ------------------
+    INTERACTION TOKENS ↓
+  --------------------- */
+
+  /* TRANSITION */
+  --tr-entry: all 0.1s ease-out; /* Snappy, immediate feedback */
+  --tr-exit: all 0.5s ease-in-out; /* Smooth, elegant return */
 }
 /* =================
 DESIGN TOKEN VAULT ↑
@@ -168,17 +178,66 @@ body {
   flex-direction: column;
   gap: var(--sp-200);
   list-style-type: var(--lst-ul); /* remove bullet points */
+  transition: var(
+    --tr-active
+  ); /* Provides visual feedback for hover and keyboard focus */
 }
 
 .social-card__btn {
   display: block;
   padding: var(--pd-btn);
-  text-decoration: var(--td-btn);
   font-size: var(--fs-14);
   font-weight: var(--fw-600);
   background-color: var(--clr-grey-700);
   color: var(--clr-white);
   border-radius: var(--br-btn);
+  text-decoration: var(--td-btn);
+  transition: var(
+    --tr-exit
+  ); /* smooth return to its original state when the mouse leaves */
+}
+
+/* --------------
+    HOVER STATE ↓
+  --------------- */
+.social-card__btn:hover,
+.social-card__btn:focus-visible {
+  background-color: var(--clr-green);
+  color: var(--clr-grey-700);
+  outline: none;
+  transition: var(
+    --tr-entry
+  ); /* Snappy active state change when the mouse enters  */
+}
+
+.attribution a:hover,
+.attribution a:focus-visible {
+  outline: none;
+  border-radius: var(--br-attribution);
+  background-color: var(--clr-green);
+  color: var(--clr-grey-700);
+  transition: var(
+    --tr-entry
+  ); /* Snappy active state change when the mouse enters  */
+}
+
+/* --------------
+    HOVER STATE ↑
+  --------------- */
+
+.attribution {
+  margin: var(--sp-150);
+  font-size: var(--sp-110);
+  text-align: center;
+  color: var(--clr-white);
+}
+.attribution a {
+  text-decoration: none;
+  font-weight: var(--fw-700);
+  color: var(--clr-white);
+  transition: var(
+    --tr-exit
+  ); /* smooth return to its original state when the mouse leaves */
 }
 
 /* =======================
