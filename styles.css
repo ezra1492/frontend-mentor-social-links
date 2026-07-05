@@ -37,17 +37,18 @@ Purpose: Centralized "storage room" for all project variables.
   --sp-500: 2.5rem; /* 40px */
 
   /* SEMANTIC */
-
   /* FONT SIZE */
   --fs-14: 0.875rem; /* 14px */
   --fs-24: 1.5rem; /* 24px */
 
-  /* CARD WIDTH */
+  /* WIDTHS */
   --wd-card: clamp(20rem, 90vw, 24rem); /* 320-384px 90% viewport width */
+  --wd-avatar: 5.5rem; /* 88px */
 
   /* BORDER RADIUS */
   --br-card: var(--sp-150);
   --br-btn: var(--sp-100);
+  --br-avatar: 50%;
 
   /* ---------------
     SPACING TOKENS ↑
@@ -108,6 +109,13 @@ body {
   /* 4. Visuals */
   background-color: var(--clr-grey-800);
   border-radius: var(--br-card);
+}
+
+.social-card__avatar {
+  /* 2. Box Model */
+  width: var(--wd-avatar);
+  /* 4. Visuals */
+  border-radius: var(--br-avatar);
 }
 /* =======================
 SOCIAL LINKS CARD DESIGN ↑
