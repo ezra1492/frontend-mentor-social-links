@@ -6,13 +6,12 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [AI Collaboration](#ai-collaboration)
   - [Continued development](#continued-development)
+  - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
 
 ## Overview
@@ -30,6 +29,38 @@ I built this project with a mobile-first approach, ensuring that the layout look
 Users should be able to:
 
 - See hover and focus states for all interactive elements on the page.
+  - **Implementation Note:** These states are defined using the `.social-card__btn:hover` and `:focus-visible` selectors in my CSS, ensuring both mouse and keyboard users receive clear visual feedback.
+
+```css
+/* --------------
+    HOVER STATE ↓
+  --------------- */
+.social-card__btn:hover,
+.social-card__btn:focus-visible {
+  background-color: var(--clr-green);
+  color: var(--clr-grey-700);
+  transition: var(
+    --tr-entry
+  ); /* Snappy active state change when the mouse enters  */
+}
+
+.attribution a:hover,
+.attribution a:focus-visible {
+  border-radius: var(--br-attribution);
+  background-color: var(--clr-green);
+  color: var(--clr-grey-700);
+  transition: var(
+    --tr-entry
+  ); /* Snappy active state change when the mouse enters  */
+}
+
+/* --------------
+    HOVER STATE ↑
+  --------------- */
+```
+
+![demostration GIF](assets/images/Hover%20figma-live%20preview.gif)
+_(Visual demonstration of the interactive hover/focus states described above)_
 
 ### Links
 
@@ -52,7 +83,14 @@ Users should be able to:
 
 During this project, I refined the architectural foundations of my CSS and interaction logic.
 
-#### 1. Layered Spacing: Primitives and Semantics
+#### Key Takeaways:
+
+- **Easier Clicking:** I learned to make links expand to fill their entire container (using `display: block`), so the whole button is clickable, not just the text.
+- **Professional Feel:** I used "asymmetric timing," meaning the button reacts instantly when you touch it but fades back slowly when you leave, making the app feel more responsive and polished.
+
+#### Technical Deep Dive:
+
+##### 1. Layered Spacing: Primitives and Semantics
 
 I perfected the use of **Primitive spacing** as a "tape measure" or a _tatami_ mat (the base unit). **Semantic spacing** represents functional roles—the width of a door, the height of a window, or the dimensions of a room.
 
@@ -72,7 +110,7 @@ I perfected the use of **Primitive spacing** as a "tape measure" or a _tatami_ m
 
 ![Design Token Vault](assets/images/Desig%20Token%20Vault%20+%20rule%20body-card.png)
 
-#### 2. Layout Dynamics: Block-level Links
+##### 2. Layout Dynamics: Block-level Links
 
 I reinforced my understanding of element behavior within the box model.
 **Lists:** To remove bullet points from an unordered list, the `list-style-type` property must be assigned directly to the `ul` element.
@@ -100,7 +138,7 @@ I reinforced my understanding of element behavior within the box model.
 
 ![Block-level anchor](assets/images/rule%20btn.png)
 
-#### 3. Asymmetric Interaction Timing
+##### 3. Asymmetric Interaction Timing
 
 I implemented a professional "hydraulic" interaction feel.
 **The Entry:** A snappy, immediate transition is assigned to the `:hover` and `:focus-visible` states.
@@ -116,8 +154,6 @@ I implemented a professional "hydraulic" interaction feel.
 }
 ```
 
-![Asymetric transition](assets/images/Hover%20figma-live%20preview.gif)
-
 ### Continued development
 
 In future projects, I intend to refine my command of the following areas:
@@ -128,12 +164,12 @@ In future projects, I intend to refine my command of the following areas:
 
 ### AI Collaboration
 
-I leveraged an iterative feedback loop from my previous Frontend Mentor projects (QR Code, Blog Preview, and NFT Preview) to engineer a high-fidelity **Context Prompt** using NotebookLM. This prompt established a professional architectural framework for this challenge.
+I used NotebookLM to create an iterative feedback loop and establish a professional architectural framework.
 
-- **Methodology:** We strictly followed an **"Outside-In Property Sort Rule"** (Layout → Box Model → Typography → Visuals) to maintain a clean and predictable CSS structure.
-- **Evolution of Workflow:** In earlier projects, my focus was primarily on the mechanics of HTML/CSS. Now I'm prioritizing **Conventional and Atomic Commits** to track architectural movements. The integration of **Gitmojis** has been instrumental in making the repository's history legible and intent-driven.
-- **Documentation:** I continue to utilize "swimming pool lanes" (systemic comment blocks) within the CSS. These serve as architectural reminders of _why_ specific semantic tags or property declarations were chosen, ensuring the code remains self-documenting and resilient.
-- **Technical Audits:** The AI performed rigorous stress-tests on my "Design Token Vault" (Primitive vs. Semantic abstractions) and validated BEM (Block-Element-Modifier) naming conventions to prevent selector leakage.
+- **Architecture:** Followed an "Outside-In Property Sort Rule" (Layout → Box Model → Typography → Visuals) for predictable CSS.
+- **Workflow:** Adopted Conventional Commits and Gitmojis to make the repository history legible and intent-driven.
+- **Documentation:** Utilized "swimming pool lanes" (comment blocks) to document the why behind technical choices, ensuring the code remains self-documenting.
+- **Audits:** Conducted AI stress-tests on the "Design Token Vault" and validated BEM naming to prevent style leaks.
 
 ## Author
 
